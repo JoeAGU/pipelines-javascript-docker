@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: joeagupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: joeagupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: joeagupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: joeagupipelinesjavascriptdocker 
+          image: mycontainerregistry0202101.azurecr.io/joeagupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
